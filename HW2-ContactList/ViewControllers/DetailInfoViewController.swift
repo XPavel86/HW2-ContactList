@@ -21,9 +21,10 @@ final class DetailInfoViewController: UIViewController {
         super.viewDidLoad()
         
         if let person = person {
+            navigationItem.title = person.fullName
+            
             phoneLabel.text = "Phone: \(person.phone)"
             emailLabel.text = "Email: \(person.email)"
-            navigationItem.title = person.fullName
         }
     }
 }
