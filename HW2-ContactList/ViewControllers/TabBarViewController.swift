@@ -18,13 +18,13 @@ final class TabBarViewController: UITabBarController {
             
             viewControllers.forEach { navigationController in
                 
-                if let topViewController = navigationController.topViewController {
+                if let topVС = navigationController.topViewController {
                     
-                    if let contactsVC = topViewController as? ContactsViewController {
+                    if let contactsVC = topVС as? ContactsViewController {
                         contactsVC.person = person
                         contactsVC.title = "Contacts"
                         
-                    } else if let personsVC = topViewController as? PersonsViewController {
+                    } else if let personsVC = topVС as? PersonsViewController {
                         personsVC.person = person
                         personsVC.title = "Persons"
                     }
