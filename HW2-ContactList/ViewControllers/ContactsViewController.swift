@@ -27,9 +27,9 @@ final class ContactsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsCell", for: indexPath)
         let person = person[indexPath.row]
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactsCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         
         content.text = person.fullName

@@ -16,7 +16,7 @@ final class DetailInfoViewController: UIViewController {
     // MARK: - Public Properties
     var person: Person?
     
-    // MARK: - Initializers
+    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         

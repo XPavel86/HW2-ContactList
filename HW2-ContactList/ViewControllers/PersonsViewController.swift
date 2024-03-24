@@ -12,12 +12,6 @@ final class PersonsViewController: UITableViewController {
     // MARK: - Public Properties
     var person: [Person] = []
     
-    // MARK: - Initializers
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            tableView.rowHeight = 50
-    }
-    
     // MARK: - Overrides Methods
     override func numberOfSections(in tableView: UITableView) -> Int {
         return person.count
@@ -36,15 +30,14 @@ final class PersonsViewController: UITableViewController {
         let person = person[indexPath.section]
         
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: "PersonsCell",
+            withIdentifier: "PhoneСell",
             for: indexPath
         )
-        
         var content = cell.defaultContentConfiguration()
         
         if indexPath.row == 0 {
             content.text = person.phone
-            content.image = UIImage(systemName: "phone.fill.connection")
+            content.image = UIImage(systemName: "phone")
         } else {
             content.text = person.email
             content.image = UIImage(systemName: "envelope")
