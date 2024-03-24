@@ -12,7 +12,7 @@ final class ContactsViewController: UITableViewController {
     // MARK: - Public Properties
     var person: [Person] = []
     
-    // MARK: - Overrides Methods
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let indexPath = tableView.indexPathForSelectedRow {
@@ -21,6 +21,7 @@ final class ContactsViewController: UITableViewController {
         }
     }
 
+    // MARK: - Overrides Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return person.count
     }
