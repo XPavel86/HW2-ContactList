@@ -30,7 +30,7 @@ final class PersonsViewController: UITableViewController {
         let person = person[indexPath.section]
         
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: "PhoneСell",
+            withIdentifier: "PhoneEmailСell",
             for: indexPath
         )
         var content = cell.defaultContentConfiguration()
