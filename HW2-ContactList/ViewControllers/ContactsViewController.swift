@@ -15,9 +15,10 @@ final class ContactsViewController: UITableViewController {
     // MARK: - Overrides Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let detailsVC = segue.destination as? DetailInfoViewController
-        detailsVC?.person = person[indexPath.row]
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailsVC = segue.destination as? DetailInfoViewController
+            detailsVC?.person = person[indexPath.row]
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
